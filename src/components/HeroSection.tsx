@@ -4,14 +4,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Briefcase } from 'lucide-react';
 import LetterGlitch from './LetterGlitch';
+import { downloadResume } from '@/utils/paths';
 
 const HeroSection: React.FC = () => {
-  const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = process.env.NEXT_PUBLIC_RESUME_PATH || '/Akshay_Kumar.pdf';
-    link.download = process.env.NEXT_PUBLIC_RESUME_FILENAME || 'Akshay_Kumar_Resume.pdf';
-    link.click();
-  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">

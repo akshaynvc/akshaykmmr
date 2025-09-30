@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Menu, X } from 'lucide-react';
+import { downloadResume } from '@/utils/paths';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,13 +25,7 @@ const Navigation: React.FC = () => {
     { href: '#contact', label: 'Contact' },
   ];
 
-  const downloadResume = () => {
-    // Create a download link for resume
-    const link = document.createElement('a');
-    link.href = process.env.NEXT_PUBLIC_RESUME_PATH || '/Akshay_Kumar.pdf';
-    link.download = process.env.NEXT_PUBLIC_RESUME_FILENAME || 'Akshay_Kumar_Resume.pdf';
-    link.click();
-  };
+  // Remove the local downloadResume function since we're importing it
 
   return (
     <motion.nav

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Download, Github, Linkedin, Clock, CheckCircle } from 'lucide-react';
+import { downloadResume } from '@/utils/paths';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -44,12 +45,7 @@ const ContactSection: React.FC = () => {
     }, 2000);
   };
 
-  const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = process.env.NEXT_PUBLIC_RESUME_PATH || '/Akshay_Kumar.pdf';
-    link.download = process.env.NEXT_PUBLIC_RESUME_FILENAME || 'Akshay_Kumar_Resume.pdf';
-    link.click();
-  };
+  // Remove the local downloadResume function since we're importing it
 
   const contactInfo = [
     {
