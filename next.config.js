@@ -6,7 +6,7 @@ const nextConfig = {
     unoptimized: true
   },
   // GitHub Pages serves from a subdirectory, so we need to set basePath if your repo name isn't your username
-  // basePath: '/your-repo-name',
+  basePath: '/akshaykmmr',
 }
 
 module.exports = nextConfig
